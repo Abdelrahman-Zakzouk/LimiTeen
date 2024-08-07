@@ -339,8 +339,7 @@ body::-webkit-scrollbar-button:single-button:horizontal:increment {
   cursor: pointer;
 }
 
-.nav 
-{
+.nav{
   position: absolute;
   top: 13vh;
   left: -199.7vw;
@@ -354,9 +353,9 @@ body::-webkit-scrollbar-button:single-button:horizontal:increment {
   border: solid #1f2029;
   width: 98vw;
   height: 60vh;
-  display: flex;
+  /*display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-around;*/
   transition-property: all;
   transition-duration: 500ms;
   z-index: 100;
@@ -715,6 +714,32 @@ ion-icon{
 
 ion-icon {
   pointer-events :none;
+}
+
+button{
+  width: 47.5%;
+  height: 9vh;
+  /*margin-top: 6px;*/
+  margin-left: 6px;
+}
+
+.sign{
+  height: 10vh;
+  align-items: center;
+  align-self: center;
+  width: 98vw;
+
+}
+
+.sign_up{
+  margin-left: 10px;
+}
+
+.links{
+  height: 65vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .sections{
