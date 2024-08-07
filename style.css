@@ -3,6 +3,7 @@
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
   transition: all 0.5s;
+  user-select: none;
 }
 
 body 
@@ -10,10 +11,10 @@ body
   position:relative;
   /* background: url(bg.svg); */
   font-size: 20px;
-  background-color: #d1cbb0;
+  background-color: #d9d9d9;
   /* background-size: 5vw; */
   /* width: 100%; */
-  color: #1f2029;
+  color: #2fbeb4;
   overflow:auto;
   /* overflow-y: scroll; */
   overflow-x: hidden;
@@ -44,7 +45,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  box-shadow: inset 0 0 10px 10px #2e344f;
+  box-shadow: inset 0 0 10px 10px #2fbeb4;
   border-radius: 100vw;
   border: solid 3px transparent;
 }
@@ -309,6 +310,7 @@ body::-webkit-scrollbar-button:single-button:horizontal:increment {
   display: flex;
   flex-direction: row-reverse;
   height: 6.4vh;
+  justify-content: space-between;
 }
 
 .navburger 
@@ -392,7 +394,7 @@ body::-webkit-scrollbar-button:single-button:horizontal:increment {
   padding-left: 2px;
   color: transparent;
   font-size: 6px;
-  background-color: #2e344f;
+  background-color: #2fbeb4;
   user-select: none;
   transform-origin: left;
   width: 1.1vw;
@@ -412,7 +414,7 @@ body::-webkit-scrollbar-button:single-button:horizontal:increment {
   padding-left: 2px;
   color: transparent;
   font-size: 6px;
-  background-color: #2e344f;
+  background-color: #2fbeb4;
   user-select: none;
   width: 2.03vw;
   height: 0.5vh;
@@ -431,7 +433,7 @@ body::-webkit-scrollbar-button:single-button:horizontal:increment {
   padding-left: 2px;
   color: transparent;
   font-size: 6px;
-  background-color: #2e344f;
+  background-color: #2fbeb4;
   user-select: none;
   transform-origin: right;
   width: 1vw;
@@ -451,8 +453,9 @@ body::-webkit-scrollbar-button:single-button:horizontal:increment {
 .logo 
 {
   position: relative;
-  margin-left: auto;
-  margin-right: 0;
+  /* margin-left: auto; */
+  /* margin-right: 0; */
+  left: 0;
 }
 
 .logo-lnk
@@ -482,7 +485,7 @@ body::-webkit-scrollbar-button:single-button:horizontal:increment {
 
 .logo-lnk span 
 {
-  color: #ecca2f;
+  color: #2fbeb4;
   -webkit-text-stroke: 0.6px rgb(122, 104, 0);
   text-shadow: 1px 1px white, -1px -1px #444;
   transition: all 0.5s;
@@ -605,6 +608,7 @@ section{
 .svgs{
   height: 35vh;
   width: 100%;
+  overflow: hidden;
 }
 
 .svg{
@@ -673,7 +677,7 @@ section{
   z-index: 99;
   border: none;
   outline: none;
-  background-color: #2e344f;
+  background-color: #2fbeb4;
   color: #d1cbb0;
   cursor: pointer;
   padding: 15px;
@@ -809,9 +813,9 @@ ol{
   margin: auto;
   width: 50%;
   padding-right: 10vw;
-  text-align: right;
+  /* text-align: right; */
   justify-content: center;
-  direction: rtl;
+  direction: ltr;
 }
 
 .content{
@@ -871,7 +875,7 @@ ol{
   width: 40vw;
   direction: rtl;
   font-size: 1.5vw;
-  text-align: right;
+  /* text-align: right; */
   vertical-align: middle;
   padding-top: 0;
 }
@@ -881,7 +885,7 @@ ol{
   width: 50vw;
   direction: rtl;
   font-size: 1.5vw;
-  text-align: right;
+  /* text-align: right; */
   vertical-align: middle;
 }
 
@@ -905,7 +909,7 @@ ol{
 .explanation{
   /* justify-content: center;
   align-content: center; */
-  text-align: right;
+  /* text-align: right; */
   line-height: 6vh;
   width: 70%;
   padding: 3vw;
@@ -914,7 +918,7 @@ ol{
 .explanation2{
   /* justify-content: center;
   align-content: center; */
-  text-align: right;
+  /* text-align: right; */
   line-height: 6vh;
   padding: 3vw;
 }
@@ -995,7 +999,7 @@ p{
 }
 
 li{
-  text-align: right;
+  /* text-align: right; */
   font-family: fred;
 }
 
@@ -1279,6 +1283,16 @@ li{
   align-items: center;
 }
 
+img {  
+  -drag: none;  
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  z-index: -99;
+}
+
 .dark-mode {
   background-color: #1f2029 ;
   color: #d1cbb0;
@@ -1295,7 +1309,7 @@ li{
 
 .dark-mode .scroll-to-top{
   background: #d1cbb0;
-  color: #2e344f;
+  color: #2fbeb4;
 }
 
 .dark-mode .logo-lnk span{
@@ -1437,7 +1451,6 @@ body{
 
   .logo 
   {
-    width: 100vw;
     border-right-width: 90px;
   }
 
@@ -1537,7 +1550,7 @@ body{
     font-size: 1em;
     width: 100%;
     padding: 0;
-    text-align: right;
+    /* text-align: right; */
   }
   
   .explanation-text4, .explanation-text3, .explanation-text, .explanation-text5{
@@ -1787,7 +1800,6 @@ body{
 
   .logo 
   {
-    width: 100vw;
     border-right-width: 90px;
   }
 
@@ -1887,7 +1899,7 @@ body{
     font-size: 1em;
     width: 100%;
     padding: 0;
-    text-align: right;
+    /* text-align: right; */
   }
   
   .explanation-text4, .explanation-text3, .explanation-text, .explanation-text5{
@@ -2120,7 +2132,6 @@ body{
 
   .logo 
   {
-    width: 100vw;
     border-right-width: 90px;
   }
 
@@ -2220,7 +2231,7 @@ body{
     font-size: 1em;
     width: 100%;
     padding: 0;
-    text-align: right;
+    /* text-align: right; */
   }
   
   .explanation-text4, .explanation-text3, .explanation-text, .explanation-text5{
@@ -2467,7 +2478,6 @@ body{
 
   .logo 
   {
-    width: 100vw;
     border-right-width: 90px;
   }
 
@@ -2567,7 +2577,7 @@ body{
     font-size: 1em;
     width: 100%;
     padding: 0;
-    text-align: right;
+    /* text-align: right; */
   }
   
   .explanation-text4, .explanation-text3, .explanation-text, .explanation-text5{
@@ -2789,7 +2799,7 @@ body{
     position:relative;
     /* background: url(bg.svg); */
     font-size: 20px;
-    background-color: #d1cbb0;
+    background-color: #d9d9d9;
     /* background-size: 5vw; */
     /* width: 100%; */
     color: #1f2029;
@@ -2823,7 +2833,7 @@ body{
   }
 
   body::-webkit-scrollbar-thumb {
-    box-shadow: inset 0 0 10px 10px #2e344f;
+    box-shadow: inset 0 0 10px 10px #2fbeb4;
     border-radius: 100vw;
     border: solid 3px transparent;
   }
@@ -3175,7 +3185,7 @@ body{
     padding-left: 2px;
     color: transparent;
     font-size: 6px;
-    background-color: #2e344f;
+    background-color: #2fbeb4;
     user-select: none;
     transform-origin: left;
     width: 1.1vw;
@@ -3195,7 +3205,7 @@ body{
     padding-left: 2px;
     color: transparent;
     font-size: 6px;
-    background-color: #2e344f;
+    background-color: #2fbeb4;
     user-select: none;
     width: 2.03vw;
     height: 0.5vh;
@@ -3214,7 +3224,7 @@ body{
     padding-left: 2px;
     color: transparent;
     font-size: 6px;
-    background-color: #2e344f;
+    background-color: #2fbeb4;
     user-select: none;
     transform-origin: right;
     width: 1vw;
@@ -3234,8 +3244,7 @@ body{
   .logo 
   {
     position: relative;
-    margin-left: auto;
-    margin-right: 0;
+    /* margin-right: 0; */
   }
 
   .logo-lnk
@@ -3265,7 +3274,7 @@ body{
 
   .logo-lnk span 
   {
-    color: #ecca2f;
+    color: #2fbeb4;
     -webkit-text-stroke: 0.6px rgb(122, 104, 0);
     text-shadow: 1px 1px white, -1px -1px #444;
     transition: all 0.5s;
@@ -3406,7 +3415,7 @@ body{
       z-index: 99;
       border: none;
       outline: none;
-      background-color: #2e344f;
+      background-color: #2fbeb4;
       color: #d1cbb0;
       cursor: pointer;
       padding: 15px;
@@ -3540,7 +3549,7 @@ body{
     margin: auto;
     width: 50%;
     padding-right: 10vw;
-    text-align: right;
+    /* text-align: right; */
     justify-content: center;
     direction: rtl;
   }
@@ -3602,7 +3611,7 @@ body{
     width: 90%;
     direction: rtl;
     font-size: 1.5vw;
-    text-align: right;
+    /* text-align: right; */
     vertical-align: middle;
     padding-top: 0;
   }
@@ -3612,7 +3621,7 @@ body{
     width: 50vw;
     direction: rtl;
     font-size: 1.5vw;
-    text-align: right;
+    /* text-align: right; */
     vertical-align: middle;
   }
 
@@ -3636,7 +3645,7 @@ body{
   .explanation{
     /* justify-content: center;
     align-content: center; */
-    text-align: right;
+    /* text-align: right; */
     line-height: 6vh;
     width: 70%;
     padding: 3vw;
@@ -3645,7 +3654,7 @@ body{
   .explanation2{
     /* justify-content: center;
     align-content: center; */
-    text-align: right;
+    /* text-align: right; */
     line-height: 6vh;
     /* padding: 3vw; */
   }
@@ -3727,7 +3736,7 @@ body{
   }
 
   li{
-    text-align: right;
+    /* text-align: right; */
     font-family: fred;
   }
 
@@ -4026,7 +4035,7 @@ body{
   }
 
   .dark-mode {
-    background-color: #04020e ;
+    background-color: #010308 ;
     color: #d1cbb0;
   }
 
@@ -4041,7 +4050,7 @@ body{
 
   .dark-mode .scroll-to-top{
     background: #e7287b;
-    color: #04020e;
+    color: #010308;
   }
 
   .dark-mode .logo-lnk span{
