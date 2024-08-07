@@ -1352,7 +1352,6 @@ img {
   -webkit-user-drag: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  z-index: -99;
 }
 
 .dark-mode {
