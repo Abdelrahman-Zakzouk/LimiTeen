@@ -1003,7 +1003,7 @@ li{
   font-family: fred;
 }
 
-.cards {
+/*.cards {
   overflow: hidden;
   border-style: solid;
   border-width: 2px;
@@ -1083,9 +1083,9 @@ li{
   height: 100%;
   border-radius: 15px;
   transition: all 0.5s;
-}
+}*/
 
-#card1:hover:after {
+/*#card1:hover:after {
   content: "كقول حسّان : أكرم بقوم رسول الله قائدهم • إذا تفرّقت الأهواء والشّيعُ";
 }
 #card2:hover:after {
@@ -1099,35 +1099,97 @@ li{
 }
 #card5:hover:after {
   content: 'قال تعالى: " أولئك الذين اشتروا الضّلالة بالهدى والعذاب بالمغفرة، فما أصْبَرَهم على النّار!"';
+}*/
+
+.card {
+  position: relative;
+  width: 28vw;
+  height: 30vh;
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /*transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);*/
+}
+
+.card img {
+  width: 50%;
+  height: 70%;
+  fill: #333;
+  /*transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);*/
+}
+
+.card:hover {
+  /*transform: rotate(-5deg) scale(1.1);*/
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  opacity: 0;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card:hover .card__content {
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+
+.card__title {
+
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+}
+
+.card__description {
+  font-size: 14px;
+  color: #777;
+  line-height: 1.4;
+}
+
+.card:hover img {
+  scale: 0;
+  transform: rotate(-45deg);
 }
 
 .row{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 1vw;
+  gap: 2.5vw;
   /* padding-inline: 3vw; */
 }
 
-.card {
+/*.card {
   width: 80vw;
   height: 52vh;
   border-radius: 4px;
-  /* background: #212121; */
+  /* background: #212121;
   display: flex;
   gap: 5px;
   padding: .4em;
   align-self: center;
 }
 
-.card p {
+/*.card p {
   height: 52vh;
   flex: 1;
   overflow: hidden;
   cursor: pointer;
   border-radius: 2px;
   transition: all .5s;
-  /* background: #212121; */
+  /* background: #212121; 
   border: 1px solid #ff5a91;
   display: flex;
   flex-direction: column;
@@ -1135,11 +1197,11 @@ li{
   align-items: center;
 }
 
-.card p:hover {
+/*.card p:hover {
   flex: 4;
 }
 
-.card p span {
+/*.card p span {
   min-width: 14em;
   padding: .5em;
   text-align: center;
@@ -1150,20 +1212,20 @@ li{
   letter-spacing: .1em;
 }
 
-.card p:hover span {
+/*.card p:hover span {
   transform: rotate(0);
 }
 
-.hide{
+/*.hide{
   display: none;
   flex-direction: column;
 }
 
-.card p:hover .hide{
+/*.card p:hover .hide{
   display: flex;
 }
 
-.boxes{
+/*.boxes{
   position: relative;
   width: 12vw;
   height: 250px;
@@ -1173,7 +1235,7 @@ li{
   box-shadow: 0 15px 60px rgba(0, 0, 0, 0.5);
 }
 
-.face {
+/*.face {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1184,7 +1246,7 @@ li{
   align-items: center;
 }
 
-.face.back {
+/*.face.back {
   box-sizing: border-box;
   padding: 20px;
   border: solid;
@@ -1193,22 +1255,22 @@ li{
   border-color: rgb(255, 20, 20);
 }
 
-.face.back b {
+/*.face.back b {
   margin: 0;
   padding: 0;
 }
 
-.face.back .desc {
+/*.face.back .desc {
   background-color: #eee;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.face.front {
+/*.face.front {
   transition: 0.5s;
 }
 
-.face.front b {
+/*.face.front b {
   margin: 0;
   padding: 0;
   font-size: 1.5em;
@@ -1218,38 +1280,38 @@ li{
   z-index: 10;
 }
 
-.boxes:hover .face.front {
+/*.boxes:hover .face.front {
   height: 60px;
 }
 
-.boxes:hover .face.front b {
+/*.boxes:hover .face.front b {
   font-size: 0.85em;
 }
 
-.boxes .face.back p {
-  font-size: 0.85em;
-  align-items: start;
-
-}
-
-.boxes:hover .face.back p {
+/*.boxes .face.back p {
   font-size: 0.85em;
   align-items: start;
 
 }
 
-.face.front {
+/*.boxes:hover .face.back p {
+  font-size: 0.85em;
+  align-items: start;
+
+}
+
+/*.face.front {
   background: linear-gradient(45deg, rgb(141, 57, 57), rgb(255, 20, 20));
   border-radius: 15px;
 }
 
-.desc{
+/*.desc{
   align-items: start;
   padding-bottom: 75px;
   margin-bottom: 75px;
 }
 
-.row-boxes{
+/*.row-boxes{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1257,7 +1319,7 @@ li{
   padding-inline: 5vw;
 }
 
-.row-boxes2{
+/*.row-boxes2{
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -1265,13 +1327,13 @@ li{
   padding-inline: 0;
 }
 
-.row-boxes4{
+/*.row-boxes4{
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 4vw;
   padding-inline: 0;
-}
+}*/
 
 .interactive{
   display: flex;
@@ -3740,7 +3802,7 @@ body{
     font-family: fred;
   }
 
-  .cards {
+   /*.cards {
     overflow: hidden;
     border-style: solid;
     border-width: 2px;
@@ -3839,14 +3901,14 @@ body{
     flex-direction: row;
     justify-content: center;
     gap: 1vw;
-    /* padding-inline: 3vw; */
+    /* padding-inline: 3vw; 
   }
 
-  .card {
+  /*.card {
     width: 80vw;
     height: 52vh;
     border-radius: 4px;
-    /* background: #212121; */
+    /* background: #212121; 
     display: flex;
     gap: 5px;
     padding: .4em;
@@ -3860,7 +3922,7 @@ body{
     cursor: pointer;
     border-radius: 2px;
     transition: all .5s;
-    /* background: #212121; */
+    /* background: #212121; 
     border: 1px solid #ff5a91;
     display: flex;
     flex-direction: column;
@@ -4023,8 +4085,7 @@ body{
     display: flex;
     flex-direction: row;
     gap: 1vw;
-  }
-
+  }*/
   .interactive{
     display: flex;
     flex-direction: row-reverse;
