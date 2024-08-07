@@ -729,6 +729,25 @@ ion-icon {
   height: 70vh;
   text-align: center;
 }
+.apps_controling{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.sleep_mode{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.parental_controlling{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
 
 .section6{
   display: flex;
@@ -3543,7 +3562,7 @@ body{
   .section2{
     flex-direction: column;
       text-align: center;
-      height: 70vh;
+      /* height: 70vh; */
   }
 
   .section5{
