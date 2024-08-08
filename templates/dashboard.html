@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Welcome, {{ user.username }}</h1>
+    <p>Screen Time Limit: {{ user.screen_time_limit }} minutes</p>
+    <p>Screen Time Used: {{ user.used_time }} minutes</p>
+    <form id="limit-form">
+        Set Screen Time Limit (minutes): <input type="number" name="limit" required /><br>
+        <input type="submit" value="Set Limit" />
+    </form>
+    <div id="status"></div>
+    <script>
+        $(document).ready(function(){
+            $('#limit-form').on('submit', function(e){
+                e.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: '/set_limit',
+                    data: $(this).serialize(),
+                    success: function(response){
+                        $('#status').html('Screen time limit set to ' + response.limit + ' minutes.');
+                        trackTime();
+                    }
+                });
+            });
+        });
+
+        function trackTime() {
+            setInterval(function(){
+                $.ajax({
+                    type: 'POST',
+                    url: '/track_time',
+                    success: function(response){
+                        $('#status').html('Used Time: ' + response.used_time.toFixed(2) + ' minutes. Remaining Time: ' + response.remaining_time.toFixed(2) + ' minutes.');
+                        if(response.remaining_time <= 0) {
+                            alert('Screen time limit reached!');
+                        }
+                    }
+                });
+            }, 1000);  // Update every second
+        }
+    </script>
+    <a href="/logout">Logout</a>
+</body>
+</html>

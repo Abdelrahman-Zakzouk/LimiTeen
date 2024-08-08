@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang='en' dir="ltr">
+<head>
+	<!-- UTF-8 -->
+	<meta charset='UTF-8'>
+	<!--  -->
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<!-- Device-screen specs -->
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<!-- Page Title -->
+	<title>LimiTeen</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/src/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/src/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/src/favicon-16x16.png">
+  <link rel="manifest" href="/src/site.webmanifest">
+	<!-- Link Styling CSS file -->
+	<link rel='stylesheet' type='text/css' href='../static/css/style.css'>
+	<!-- Link Google fonts -->
+	<link rel='preconnect' href='https://fonts.googleapis.com'> 
+	<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lalezar&amp;display=swap" rel="stylesheet">
+  <!-- Link Scripting JS File & Typed Module -->
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+	<script src='https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js'></script>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body id="body">
+	
+  <button class="scroll-to-top" id="scroll-to-top" onclick="back()">
+    <ion-icon size="large" name="chevron-up-outline"></ion-icon>
+  </button>
+	
+	<div class="header" dir="ltr">
+    <div class="header-content" >
+      <div class="interactive">
+        <div class="navburger" id="navburger">
+          <button class="navburger-button" id="navburger-button" onclick="navtoggle()" onmouseenter="anim()" onmouseleave="unanim()">E</button>
+          <span class="bartop" id="bartop">e</span>
+          <span class="barmid" id="barmid">e</span>
+          <span class="barbottom" id="barbottom">e</span>
+        </div>
+        <label class="theme-switch">
+          <input type="checkbox" class="theme-switch__checkbox" onclick="theme()" id="theme-switch">
+          <div class="theme-switch__container">
+            <div class="theme-switch__clouds"></div>
+            <div class="theme-switch__stars-container">
+              <svg viewBox="0 0 144 55" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947 135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 49.0069Z" fill="currentColor"></path>
+              </svg>
+            </div>
+            <div class="theme-switch__circle-container">
+              <div class="theme-switch__sun-moon-container">
+                <div class="theme-switch__moon">
+                  <div class="theme-switch__spot"></div>
+                  <div class="theme-switch__spot"></div>
+                  <div class="theme-switch__spot"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </label>
+      </div>
+      <div class="logo" id="logo" dir="ltr">
+        <a href="/" class="logo-lnk">
+          <div class="logo-top">
+            <span class="site-name" id="site-name"></span>
+					</div>
+        </a>
+      </div>
+    </div>
+    <div class="nav" id="nav">
+      <div class="sign"> 
+
+        <span style="display:{{ display2 }}">Hey there!</span>
+        <div class="vertical_greet">
+          <button class="sign_in" onclick="location.href='/login'" style="display:{{ display }}">SIGN IN</button>
+          <button class="sign_in" onclick="location.href='/logout'">SIGN OUT</button>
+        </div>
+    </div>
+    <div class="links">
+      <a href='https://www.instagram.com/limiteen10/' target="_blank" class="nav-lnk" id="nav-lnk">
+        <ion-icon name="logo-instagram" class="ion"></ion-icon>
+        <span class="nav-lnk-ttl">
+          instagram
+        </span>
+      </a>
+      <a href='https://www.facebook.com/profile.php?id=61564123854458&sk=about' target='_blank' class="nav-lnk" id="nav-lnk">
+        <ion-icon name="logo-facebook" class="ion"></ion-icon>
+        <span class="nav-lnk-ttl">
+          facebook
+        </span>
+      </a>
+      <a href='https://youtube.com/@limiteen?si=XyQWuuysX5S2dM0J' target='_blank' class="nav-lnk" id="nav-lnk">
+        <ion-icon name="logo-youtube" class="ion"></ion-icon>
+        <span class="nav-lnk-ttl">
+          Youtube
+        </span>
+      </a>
+      <a href='https://www.tiktok.com/@limiteen10?lang=en' target='_blank' class="nav-lnk" id="nav-lnk">
+        <ion-icon name="logo-tiktok" class="ion"></ion-icon>
+        <span class="nav-lnk-ttl">
+          tiktok
+        </span>
+      </a>
+    </div>
+      </div>
+    </div>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+  <div class="page" id="page" onclick="unnavpageclk()">
+    <section class="section0">
+        <div class="svgs">
+            <div class="svg">
+                <img src="https://svgshare.com/i/196U.svg" class="waves">
+            </div>
+            <div class="svg2">
+                <img src="https://svgshare.com/i/194k.svg" class="waves2">
+        </div>
+        </div>
+        <br>
+        <div class="gap">
+            <p class="intro">What is LimiTeen?</p>
+            <ion-icon name="arrow-down-outline" size="large"></ion-icon>
+        </div>
+        <br>
+    </section>
+    <section class="section2" id="2">
+        <div class="explanation">
+          LIMITEEN is an app that helps you reduce your screen time to work in a calm environment and focus more on making new healthy habits which helps you increase your productivity
+        </div>
+        <div>
+            <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis sed at id vel! Quo voluptates veritatis architecto cum tempore porro maxime laudantium, sapiente alias velit rerum sequi unde assumenda explicabo temporibus? Ad, quas! Suscipit ab provident quaerat repellat nihil beatae ut accusantium repudiandae veritatis dolorum at fuga rerum dolore, maxime eos perferendis atque, reprehenderit dolorem voluptatem! Unde, repellat explicabo atque dolores id perspiciatis vero eligendi nemo, recusandae facilis dolor iure tempore fuga illo harum doloribus in molestiae sed autem fugit quod temporibus! In, odit odio veniam cupiditate aliquid tenetur repellendus perspiciatis deleniti quasi ratione sint provident. Explicabo, amet quibusdam! Deserunt. -->
+        </div>
+    </section>
+    <section class="sections" id="3">
+	 <div class="intro">
+        Our Services! 
+      </div>
+      <div class="row">
+      <div class="card" onclick="scrollSmoothTo(4)">
+        <img src="https://svgshare.com/i/196K.svg" alt="">
+        <!--<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>-->
+        <div class="card__content">
+          <p class="card__title">Apps controling
+          </p><p class="card__description"> This will allow the user to control the screen time of different apps </p>
+        </div>
+      </div>
+
+      <div class="card" onclick="scrollSmoothTo(5)">
+        <img src="https://svgshare.com/i/1954.svg" alt="">
+        <!--<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>-->
+        <div class="card__content">
+          <p class="card__title">sleep mode 
+          </p><p class="card__description"></p>
+        </div>
+      </div>
+
+      <div class="card" onclick="scrollSmoothTo(6)">
+        <img src="https://svgshare.com/i/194n.svg" alt="">
+        <!--<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>-->
+        <div class="card__content">
+          <p class="card__title">parental controlling
+          </p><p class="card__description"></p>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="sections" id="4">
+      <div class="apps_controling">
+        <div class="card">
+          <img src="https://svgshare.com/i/196K.svg" alt="">
+          <!--<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>-->
+          <div class="card__content">
+            <p class="card__title">Apps controling
+            </p><p class="card__description"> This will allow the user to control the screen time of different apps </p>
+          </div>
+        </div>
+      <div class="apps_controling">
+        Certainly! The app locks feature in a LIMITEEN app helps users manage and limit their access to specific applications on their devices. Here's a breakdown of how it works and its benefits:
+       <br>
+        What is the App Locks Feature?
+        The app locks feature allows users to set restrictions on individual apps by requiring a passcode, pattern, or biometric authentication (like fingerprint or face recognition) to access them. This is useful for managing screen time and preventing excessive use of certain apps.
+        <br>
+        How It Works:
+        Setup: Users configure the app locks feature through the screen time control app's settings. This typically involves selecting which apps they want to lock and setting up a security method (e.g., a passcode).
+        <br>
+        benefits:
+        <br>
+        Locking Apps: Once set up, the selected apps will be locked after a predefined period of usage or at specific times. For example, you might lock social media apps after 30 minutes of usage each day.
+        <br>
+        Unlocking Apps: To access a locked app, the user must enter the passcode, pattern, or use biometric authentication. This adds a layer of control and helps users stick to their screen time goals.
+        <br>
+        Monitoring and Adjusting: The screen time control app often provides monitoring features to track how frequently apps are accessed and adjust the lock settings as needed.
+        <br>
+        Promotes Healthy Habits: Helps users balance screen time with other activities.
+        <br>
+        Improves Focus: Reduces distractions by limiting time on non-essential apps.
+        <br>
+        Enhances Productivity: Helps manage time more effectively by controlling app usage.
+      </div>
+
+    </section>
+    <section class="section5" id="5">
+      <div class="card">
+        <img src="https://svgshare.com/i/1954.svg" alt="">
+        <!--<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>-->
+        <div class="card__content">
+          <p class="card__title">sleep mode 
+          </p><p class="card__description"></p>
+        </div>
+      </div>
+      <div class="sleep_mode">
+        Certainly! The sleep mode feature in a screen time control app is designed to help users manage their device usage during specific times, promoting healthier sleep habits and reducing screen time during rest periods. Here is an overview of how it works and its benefits:
+        <br>
+        What is the Sleep Mode Feature?
+        Sleep mode is a setting within a screen time control app that restricts or limits access to certain apps and features of a device during designated sleep or bedtime hours. The goal is to reduce screen time and minimize disruptions that could affect sleep quality.
+        <br>
+        How It Works:
+        Configuration: Users set up sleep mode by defining specific times when the feature should be active, such as from 10 PM to 7 AM. This setup can be customized to match individual sleep schedules.
+        <br>  
+        Activation: Once activated, sleep mode will automatically restrict access to certain apps or features based on the user's preferences. This might include social media, games, or other apps that could be distracting or stimulating.
+        <br>
+        Notification Management: Sleep mode may also control or silence notifications to prevent interruptions during sleep hours. Users might still receive important calls or messages, depending on the settings.
+        <br>
+        Adjustments: Users can adjust sleep mode settings as needed, such as changing the active hours or adding exceptions for specific apps or contacts.
+        <br>
+        benefits:
+        <br>
+        Improves Sleep Quality:
+        <br>
+        By limiting screen exposure before and during sleep hours, sleep mode helps reduce blue light exposure, which can interfere with the production of melatonin, a hormone that regulates sleep.
+        <br>
+        Reduces Distractions:
+        <br>
+        It minimizes interruptions from notifications or the temptation to check apps late at night, allowing users to rest more peacefully.
+        <br>
+        Encourages Healthy Habits:
+        <br>
+        Regular use of sleep mode can help establish a consistent sleep routine, promoting better overall sleep hygiene and enhancing daily productivity.
+        <br>
+        Enhances Focus and Well-being:
+        <br>
+        With fewer distractions and a more predictable sleep schedule, users may experience improved concentration and mood throughout the day.
+              
+      </div>
+
+    </section>
+    <section class="section5" id="6">
+      <div class="card">
+        <img src="https://svgshare.com/i/194n.svg" alt="">
+        <!--<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 5H4V19L13.2923 9.70649C13.6828 9.31595 14.3159 9.31591 14.7065 9.70641L20 15.0104V5ZM2 3.9934C2 3.44476 2.45531 3 2.9918 3H21.0082C21.556 3 22 3.44495 22 3.9934V20.0066C22 20.5552 21.5447 21 21.0082 21H2.9918C2.44405 21 2 20.5551 2 20.0066V3.9934ZM8 11C6.89543 11 6 10.1046 6 9C6 7.89543 6.89543 7 8 7C9.10457 7 10 7.89543 10 9C10 10.1046 9.10457 11 8 11Z"></path></svg>-->
+        <div class="card__content">
+          <p class="card__title">parental control 
+          </p><p class="card__description"></p>
+        </div>
+      </div>
+      <div class="sleep_mode">
+        Certainly! The parental control feature in a screen time control app is designed to help parents manage and oversee their children's device usage, ensuring a balanced and safe digital experience. Here’s an overview of how it works and its benefits:
+        <br>
+        What is the Parental Control Feature?
+        Parental control in a screen time control app allows parents to set restrictions, monitor usage, and manage the types of content their children can access on their devices. It provides tools to guide and enforce healthy technology habits and protect children from inappropriate content.
+        <br>
+        How It Works:
+        Setup and Configuration: Parents configure parental controls by setting up profiles for their children within the screen time control app. This setup involves defining rules and restrictions based on the child’s age, needs, and usage habits.
+        <br>
+        Screen Time Limits: Parents can set daily or weekly screen time limits for different apps or categories of apps. For example, they might restrict gaming to one hour a day while allowing educational apps without restrictions.
+        <br>
+        App Blocking and Allowance: Parents can block access to specific apps or categories of content, such as social media or adult content. They can also allow or whitelist certain apps, ensuring that children only have access to age-appropriate and approved content.
+        <br>
+        Scheduling: The app allows parents to create schedules for device usage, such as restricting access during homework time, family meals, or bedtime. This helps in enforcing structured device use.
+        <br>
+        Monitoring and Reports: The app provides reports and insights into the child’s device usage, including which apps are used the most and how much time is spent on different activities. This helps parents understand their child’s habits and make informed decisions about restrictions.
+        <br>
+        Content Filtering: Many parental control apps include content filtering features that block inappropriate websites or search results, ensuring a safer online environment.
+        <br>
+        Location Tracking (Optional): Some apps offer location tracking features, allowing parents to monitor their child’s whereabouts for added safety.
+        <br>
+        Benefits of Parental Controls
+        <br>
+        Ensures Safe Online Experience:
+        <br>
+        Protects Against Inappropriate Content: By filtering content and blocking access to unsuitable material, parental controls help create a safer online environment for children.
+        <br>
+        Promotes Healthy Device Usage:
+        <br>
+        Manages Screen Time: Helps prevent excessive screen time by enforcing limits and encouraging a balanced use of technology.
+        <br>
+        Encourages Responsible Technology Use:
+        <br>
+        Develops Good Habits: Assists in teaching children about responsible and mindful device use from a young age.
+        <br>
+        Enhances Parental Oversight:
+        <br>
+        Keeps Parents Informed: Provides tools and reports that keep parents informed about their children’s digital behavior, allowing for more proactive involvement.
+        <br>
+        Supports Family Rules and Routines:
+        <br>
+        Enforces Family Guidelines: Aligns children’s device usage with family rules, routines, and values.
+              
+      </div>
+
+    </section>
+
+    <section class="section5" id="7">
+
+    </section>
+    <section class="section6" id="8">
+
+    </section>
+    <section class="sections"></section>
+
+    </section>
+
+    <section class="section5">
+
+    </section>
+</body>
+</html>

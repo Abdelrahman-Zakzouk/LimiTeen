@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang='en' dir="ltr">
+<head>
+	<!-- UTF-8 -->
+	<meta charset='UTF-8'>
+	<!--  -->
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<!-- Device-screen specs -->
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<!-- Page Title -->
+	<title>LimiTeen Log In</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/src/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/src/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/src/favicon-16x16.png">
+  <link rel="manifest" href="/src/site.webmanifest">
+	<!-- Link Styling CSS file -->
+	<link rel='stylesheet' type='text/css' href='../static/css/login.css'>
+	<!-- Link Google fonts -->
+	<link rel='preconnect' href='https://fonts.googleapis.com'> 
+	<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lalezar&amp;display=swap" rel="stylesheet">
+  <!-- Link Scripting JS File & Typed Module -->
+	<script src='https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js'></script>
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+<body id="body">
+  <div class="header" dir="ltr">
+    <div class="header-content" >
+      <div class="logo" id="logo" dir="ltr">
+        <a href="/" class="logo-lnk">
+          <div class="logo-top">
+            <span class="site-name" id="site-name"></span>
+					</div>
+        </a>
+      </div>
+    </div>
+    <div class="nav" id="nav">
+      <br>
+      <div class="sign"> 
+        <button class="sign_up">SIGN UP</button>
+        <button class="sign_in">SIGN IN</button>
+      </div>
+      <div class="links">
+        <a href='https://www.instagram.com/limiteen10/' target="_blank" class="nav-lnk" id="nav-lnk">
+          <ion-icon name="logo-instagram" class="ion"></ion-icon>
+          <span class="nav-lnk-ttl">
+            instagram
+          </span>
+        </a>
+        <a href='https://www.facebook.com/profile.php?id=61564123854458&sk=about' target='_blank' class="nav-lnk" id="nav-lnk">
+          <ion-icon name="logo-facebook" class="ion"></ion-icon>
+          <span class="nav-lnk-ttl">
+            facebook
+          </span>
+        </a>
+        <a href='https://youtube.com/@limiteen?si=XyQWuuysX5S2dM0J' target='_blank' class="nav-lnk" id="nav-lnk">
+          <ion-icon name="logo-youtube" class="ion"></ion-icon>
+          <span class="nav-lnk-ttl">
+            Youtube
+          </span>
+        </a>
+        <a href='https://www.tiktok.com/@limiteen10?lang=en' target='_blank' class="nav-lnk" id="nav-lnk">
+          <ion-icon name="logo-tiktok" class="ion"></ion-icon>
+          <span class="nav-lnk-ttl">
+            tiktok
+          </span>
+        </a>
+      </div>
+      </div>
+    </div>
+  <header>
+    <h3 class="title">Login & Registration Form</h3>
+  </header>
+
+  <!-- container div -->
+  <div class="container">
+
+    <!-- upper button section to select
+        the login or signup form -->
+    
+      <ion-icon name="home-outline" size="large" style="cursor: pointer;" onclick = location.href='/'></ion-icon>
+      <div class="button">
+
+      <div class="slider"></div>
+      <div class="btn">
+        <button class="login">Login</button>
+        <button class="signup">Signup</button>
+      </div>
+    </div>
+
+    <!-- Form section that contains the
+        login and the signup form -->
+    <div class="form-section">
+
+      <!-- login form -->
+      <form action="/login" method ="post">
+        <div class="login-box">
+          <input type="email" name="username" required class="email ele" placeholder="youremail@email.com"/><br>
+          <input type="password" name="password" required class="password ele" placeholder="password"/><br>                 
+          <button class="clkbtn">Login</button>
+        </div>
+      </form>
+
+      <!-- signup form -->
+      <form action="/register" method="post">
+        <div class="signup-box">
+          <input type="text" 
+                class="name ele" 
+                placeholder="Enter your name (Optional)">
+          <input type="email" 
+                class="email ele" name = "username" required
+                placeholder="youremail@email.com">
+          <input type="password" 
+                class="password ele" name="password"
+                required
+                placeholder="password">
+          <input type="password" 
+          required
+                class="password ele" 
+                placeholder="Confirm password">
+          <button class="clkbtn">Signup</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='js/login.js') }}"></script>	
+  <script src="../static/js/login.js"></script>	
+</body>
+</html>
+
