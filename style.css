@@ -98,6 +98,8 @@ body::-webkit-scrollbar-button:single-button:horizontal:increment {
   background-position: 3px 3px;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(231, 40, 123)'><polygon points='0,0 0,100 50,50'/></svg>");
 }
+
+
 /*#endregion */
 
 .theme-switch {
@@ -339,7 +341,8 @@ body::-webkit-scrollbar-button:single-button:horizontal:increment {
   cursor: pointer;
 }
 
-.nav{
+.nav 
+{
   position: absolute;
   top: 13vh;
   left: -199.7vw;
@@ -353,15 +356,44 @@ body::-webkit-scrollbar-button:single-button:horizontal:increment {
   border: solid #1f2029;
   width: 98vw;
   height: 60vh;
-  /*display: flex;
+  display: flex;
   flex-direction: row;
-  justify-content: space-around;*/
+  justify-content: space-around;
   transition-property: all;
   transition-duration: 500ms;
   z-index: 100;
   visibility: hidden;
 }
 
+.sign{
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+  width: 100%;
+  justify-content: center;
+  
+}
+.sign_in:hover{
+  background-color:  #022f35;;
+}
+.sign_in{
+  border: transparent;
+  border-radius: 6px;
+  padding: 30px;
+  background-color: #db6e00;;
+  width: 15vw;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: rgba(50, 50, 93, 0.7) 0px 13px 27px -5px, rgba(0, 0, 0, 0.7) 0px 8px 16px -8px;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+  width: 100%;
+  justify-content: center;
+}
 .column-font{
   font-size: 2vw;
 }
@@ -369,14 +401,15 @@ body::-webkit-scrollbar-button:single-button:horizontal:increment {
 .nav-lnk 
 {
   color: #785f9e;
-  font-size: 5vw;
+  font-size: 4vw;
   height: 10vh;
   display: grid;
   place-items: center;
+  width: 30vw;
 }
 .nav-lnk-ttl 
 {
-  font-size: 3vw;
+  font-size: 2.5vw;
 }
 
 .ion 
@@ -485,7 +518,6 @@ body::-webkit-scrollbar-button:single-button:horizontal:increment {
 .logo-lnk span 
 {
   color: #2fbeb4;
-  -webkit-text-stroke: 0.6px rgb(122, 104, 0);
   text-shadow: 1px 1px white, -1px -1px #444;
   transition: all 0.5s;
 }
@@ -714,32 +746,6 @@ ion-icon{
 
 ion-icon {
   pointer-events :none;
-}
-
-button{
-  width: 47.5%;
-  height: 9vh;
-  /*margin-top: 6px;*/
-  margin-left: 6px;
-}
-
-.sign{
-  height: 10vh;
-  align-items: center;
-  align-self: center;
-  width: 98vw;
-
-}
-
-.sign_up{
-  margin-left: 10px;
-}
-
-.links{
-  height: 65vh;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
 
 .sections{
@@ -1841,9 +1847,8 @@ body{
   }
   
   .nav{
-    width: 95%;
+    width: 98%;
     height: 25vh;
-    padding-right: 2vw;
     padding-top: 0;
     align-self: center;
   }
@@ -2178,9 +2183,8 @@ body{
   }
   
   .nav{
-    width: 95%;
+    width: 98%;
     height: 25vh;
-    padding-right: 2vw;
     padding-top: 0;
     align-self: center;
   }
@@ -2523,9 +2527,8 @@ body{
   }
   
   .nav{
-    width: 95%;
+    width: 98%;
     height: 30vh;
-    padding-right: 2vw;
     padding-top: 0;
     align-self: center;
   }
@@ -2868,9 +2871,8 @@ body{
   }
   
   .nav{
-    width: 95%;
+    width: 98%;
     height: 40vh;
-    padding-right: 2vw;
     padding-top: 0;
     align-self: center;
   }
@@ -3236,23 +3238,25 @@ body{
     position: absolute;
     top: 13vh;
     left: -199.7vw;
-    /*place-items: center;
+    place-items: center;
     justify-content: center;
-    align-items: center;*/
+    align-items: center;
     padding-top: 0;
+    padding-bottom: 2%;
     border-radius: 2vw;
-    background-color: lavender;
+    background-color: rgba(230, 230, 250, 0.2);
     color: #082032;
     border: solid #1f2029;
-    width: 95%;
+    width: 98%;
     height: 45vh;
-    /*display: flex;
-    flex-direction: row;*/
-    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     transition-property: all;
     transition-duration: 500ms;
     z-index: 100;
     visibility: hidden;
+    gap: 5vh;
   }
 
   .nav-list{
@@ -3266,14 +3270,14 @@ body{
   .nav-lnk 
   {
     color: #785f9e;
-    font-size: 5vw;
+    font-size: 4vw;
     height: 10vh;
     display: grid;
     place-items: center;
   }
   .nav-lnk-ttl 
   {
-    font-size: 3vw;
+    font-size: 2.5vw;
   }
 
   .ion 
@@ -3380,7 +3384,6 @@ body{
   .logo-lnk span 
   {
     color: #2fbeb4;
-    -webkit-text-stroke: 0.6px rgb(122, 104, 0);
     text-shadow: 1px 1px white, -1px -1px #444;
     transition: all 0.5s;
   }
