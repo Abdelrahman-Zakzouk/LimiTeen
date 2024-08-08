@@ -1096,13 +1096,17 @@ li{
   position: relative;
   width: 28vw;
   height: 30vh;
-  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+  background: linear-gradient(-45deg, #dbbea4 0%, #dbbea4 100% );
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   /*transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);*/
+}
+
+.dark-mode .card{
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
 }
 
 .card img {
@@ -1124,7 +1128,7 @@ li{
   transform: translate(-50%, -50%) rotate(-45deg);
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding-inline: 20px;
   box-sizing: border-box;
   background-color: #fff;
   opacity: 0;
@@ -1138,11 +1142,11 @@ li{
 }
 
 .card__title {
-
-  font-size: 24px;
+  font-size: 2vw;
   color: #333;
   font-weight: 700;
   vertical-align: middle;
+  font-family: Evo;
 }
 
 .card__description {
@@ -3027,7 +3031,7 @@ body{
     transition-duration: 500ms;
     z-index: 100;
     visibility: hidden;
-    gap: 5vh;
+    gap: 3vh;
   }
 
   .nav-list{

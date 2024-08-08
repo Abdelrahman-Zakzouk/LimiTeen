@@ -223,7 +223,6 @@ header {
 .logo-lnk span 
 {
   color: #2fbeb4;
-  -webkit-text-stroke: 0.6px rgb(122, 104, 0);
   text-shadow: 1px 1px white, -1px -1px #444;
   transition: all 0.5s;
 }
@@ -305,8 +304,8 @@ header {
     width: 150px;
     border-radius: 50px;
     background-image: linear-gradient(to right,
-            rgb(255, 195, 110),
-            rgb(255, 146, 91));
+            rgb(39, 112, 105),
+            rgb(47, 190, 180));
     position: absolute;
     /* top: 20px; */
     left: 100px;
@@ -368,8 +367,8 @@ header {
     width: 150px;
     border-radius: 50px;
     background-image: linear-gradient(to right,
-            rgb(255, 195, 110),
-            rgb(255, 146, 91));
+    rgb(39, 112, 105),
+    rgb(47, 190, 180));
     font-size: 22px;
     border: none;
     cursor: pointer;
